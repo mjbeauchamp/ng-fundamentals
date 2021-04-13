@@ -2,7 +2,10 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
     selector: 'event-thumbnail',
-    templateUrl: './event-thumbnail.component.html'
+    templateUrl: './event-thumbnail.component.html',
+    styles: [`
+        .thumbnail {min-height: 210px;}
+    `]
 })
 
 export class EventThumbnailComponent {
@@ -11,6 +14,10 @@ export class EventThumbnailComponent {
 
     handleClickMe() {
         console.log('Boop!');
-        this.eventClick.emit('Howdy!!');
+        this.eventClick.emit(this.event.name);
+    }
+
+    sayHi() {
+        console.log('Hello!!');
     }
 }

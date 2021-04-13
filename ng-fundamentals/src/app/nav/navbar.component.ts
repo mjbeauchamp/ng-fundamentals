@@ -1,0 +1,19 @@
+import {Component} from '@angular/core';
+
+@Component({
+    selector: 'navbar',
+    templateUrl: './navbar.component.html',
+    styles: [`
+        .nav.navbar-nav {
+            font-size: 15px;
+        }
+        #searchForm {
+            margin-right: 100px;
+        }
+    `]
+})
+
+export class NavbarComponent {
+
+}
+
